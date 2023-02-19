@@ -17,19 +17,23 @@
 .container
 {
     display: flex;
-    width: 45%;
+    width: 640px;
     aspect-ratio: 4 / 3;
     align-self: center;
     justify-self: center;
     border-radius: 5%;
     box-shadow: 5px 5px 8px 8px var(--lavendar);
+    margin-bottom: auto;
+    margin-top: auto;
 }
 body{
-    display: grid;
-    grid-template-rows: 12fr 1fr;
-    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 98vh;
+    box-sizing: border-box;
 }
-
 .left-section
 {
     
@@ -140,4 +144,23 @@ body{
 }
 #continue:hover{
     background-color: hsla(256, 72%, 46%, 0.75);
+}
+@media screen and (max-width: 600px) 
+{
+    .container
+    {
+        flex-direction: column;
+        width: 90%;
+        min-width: none;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .right-section, .left-section
+    {
+        width: 100%;
+        box-sizing: border-box;
+        height: 480px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
 }
